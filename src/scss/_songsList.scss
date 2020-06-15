@@ -1,0 +1,61 @@
+.results {
+	max-width: 55%;
+	margin: auto;
+
+	.results-title {
+		text-align: center;
+		font-size: 3rem;
+		font-weight: 700;
+
+		.lyrics-title {
+			font-size: inherit;
+		}
+	}
+
+	.songs-list {
+		padding: 3rem 0;
+
+		.song {
+			@include flex(space-between, center);
+			padding: 1.5rem;
+			font-size: 1.75rem;
+			font-weight: 700;
+			border-radius: 3rem;
+			margin-bottom: 1rem;
+
+			.song-info {
+				.artist {
+					font-weight: inherit;
+				}
+			}
+
+			.get-lyrics-button {
+				padding: 0.5rem 1rem;
+				text-transform: capitalize;
+				font-weight: inherit;
+				font-size: 1.5rem;
+				border: none;
+				outline: none;
+				background-color: $primary-blue;
+				color: white;
+				border-radius: 3px;
+			}
+
+			&:hover {
+				background-color: $light-grey;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.results {
+		max-width: 75%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.results {
+		max-width: 90%;
+	}
+}

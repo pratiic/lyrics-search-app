@@ -1,0 +1,69 @@
+@font-face {
+	font-family: simplifica;
+	src: url(../../assets/fonts/simplifica.ttf);
+}
+
+header {
+	height: 55vh;
+	@include flex(center, center);
+	flex-direction: column;
+	background-image: url("../../assets/images/guitar-picture.jpg");
+	background-size: cover;
+	background-position: center;
+	color: white;
+	position: relative;
+
+	.page-title,
+	.form {
+		position: relative;
+		z-index: 5;
+	}
+
+	.page-title {
+		font-size: 5rem;
+		letter-spacing: 7px;
+		font-family: simplifica;
+	}
+
+	.form {
+		width: 100%;
+		@include flex(center, center);
+
+		.input-group {
+			margin: auto;
+			height: 4rem;
+			font-weight: 700;
+			@include flex(center, center);
+
+			.search-bar {
+				border: none;
+				outline: none;
+				height: inherit;
+				width: 40rem;
+				border-top-left-radius: 1rem;
+				border-bottom-left-radius: 1rem;
+				padding: 1rem;
+				font-size: 1.7rem;
+				font-weight: inherit;
+			}
+
+			.button {
+				height: inherit;
+				padding: 1rem;
+				border: none;
+				outline: none;
+				background-color: $primary-blue;
+				color: white;
+				font-weight: inherit;
+				font-size: 1.7rem;
+				@include flex(center, center);
+				border-top-right-radius: 1rem;
+				border-bottom-right-radius: 1rem;
+			}
+		}
+	}
+
+	&::after {
+		@include overlay(black, 0.45);
+	}
+}

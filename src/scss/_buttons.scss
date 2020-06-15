@@ -1,0 +1,17 @@
+.buttons {
+	@include flex(center, center);
+
+	.button {
+		padding: 0.5rem 1rem;
+		border: none;
+		outline: none;
+		background-color: $primary-blue;
+		color: white;
+		font-weight: 700;
+		font-size: 1.5rem;
+		@include flex(center, center);
+		border-radius: 3px;
+		text-transform: capitalize;
+		margin-right: 1rem;
+	}
+}
